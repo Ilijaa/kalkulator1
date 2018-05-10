@@ -4,83 +4,18 @@ $(document).ready(function () {
 	var op;
 	var firstNum;
 	
-	$('#num0').click(function() {
+	$('.red').click(function() {
 		if(number.length<12)
-		{
-			number += '0';
+		{	
+			var b = $(this).val();
+			number += b;
 		};
 		$("#output").val(number);
 	});
 	
-	
-	$('#num1').click(function() {
-		if(number.length<12)
-		{
-			number += '1';
-		};
-		$("#output").val(number);
-	});
-	
-	$('#num2').click(function() {
-	if(number.length<12)
-		{
-			number += '2';
-		};
-		$("#output").val(number);
-	});
-	$('#num3').click(function() {
-		if(number.length<12)
-		{
-			number += '3';
-		};
-		$("#output").val(number);
-	});
-	$('#num4').click(function() {
-		if(number.length<12)
-		{
-			number += '4';
-		};
-		$("#output").val(number);
-	});
-	$('#num5').click(function() {
-		if(number.length<12)
-		{
-			number += '5';
-		};
-		$("#output").val(number);
-	});
-	$('#num6').click(function() {
-		if(number.length<12)
-		{
-			number += '6';
-		};
-		$("#output").val(number);
-	});
-	$('#num7').click(function() {
-		if(number.length<12)
-		{
-			number += '7';
-		};
-		$("#output").val(number);
-	});
-	$('#num8').click(function() {
-		if(number.length<12)
-		{
-			number += '8';
-		};
-		$("#output").val(number);
-	});
-	$('#num9').click(function() {
-		if(number.length<12)
-		{
-			number += '9';
-		};
-		$("#output").val(number);
-	});
-	
-
-		$('#clear').click(function() {
+	$('#clear').click(function() {
 		number = '';
+		firstNum= ''
 		$("#output").val(number);
 	});
 	
@@ -129,22 +64,22 @@ $('#equals').click(function () {
 	console.log(firstNum, number, op);
   if (op == '+')
 	  {
-		  x=firstNum+number;
-		  $("#output").val(x);
+			  x=firstNum+number;
+			  $("#output").val(x);
 	  } else
   if (op === '-') 
 	  	  {
-		  x=firstNum-number;
-		  $("#output").val(x);
+			  x=firstNum-number;
+			  $("#output").val(x);	  
 	  } else
   if (op === '*') 
 	  	  {
-		  x=firstNum*number;
-		  $("#output").val(x);
+			  x=firstNum*number;
+			  $("#output").val(x);
 	  } else
 	  	  {
-		  x=firstNum/number;
-		  $("#output").val(x);
-	  }
+		  	  x=firstNum/number;
+			  $("#output").val(x);
+	  } 
 });
 });
